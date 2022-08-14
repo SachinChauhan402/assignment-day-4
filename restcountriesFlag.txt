@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONresume</title>
+</head>
+<body>
+
+</body>
+<script>
+
+function getdata(){
+        url='https://raw.githubusercontent.com/rvsp/restcountries-json-data/master/res-countries.json';
+        fetch(url).then((response)=>{
+                return response.json();
+                
+                    
+                    }).then((data) =>{
+                    var result = data;
+                    for (var i=0; i<=result.length; i++){
+                        console.log(result[i].flag);
+
+                    }
+                    
+                    })
+                }
+                getdata()
+    
+</script>
+</html>
